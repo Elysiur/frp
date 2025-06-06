@@ -8,11 +8,11 @@ bindPort = 7000
 
 # udp port used for kcp protocol, it can be same with 'bindPort'.
 # if not set, kcp is disabled in frps.
-kcpBindPort = 7000
+# kcpBindPort = 7000
 
 # udp port used for quic protocol.
 # if not set, quic is disabled in frps.
-quicBindPort = 7002
+# quicBindPort = 7002
 
 # Specify which address proxy will listen for, default value is same with bindAddr
 # proxyBindAddr = "127.0.0.1"
