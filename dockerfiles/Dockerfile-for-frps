@@ -3,6 +3,8 @@ FROM golang:1.23 AS building
 COPY . /building
 WORKDIR /building
 
+ENV GOPROXY=https://goproxy.cn,direct
+
 RUN make frps
 
 FROM alpine:3
