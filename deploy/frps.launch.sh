@@ -1,7 +1,10 @@
 LAUNCH_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-docker pull Elysiur/frps:v0.62.1
+
+docker pull elysiur/frps:v0.62.1
+
 mkdir -p /etc/frp
-cp -i "$LAUNCH_DIR/frpc.toml" "/etc/frp/frpc.toml"
+cp -i "$LAUNCH_DIR/deploy/frps.toml" "/etc/frp/frps.toml"
+
 docker run \
   --name frps \
   --restart always \
@@ -9,5 +12,5 @@ docker run \
   -e TZ=Asia/Shanghai \
   -v /etc/frp:/etc/frp \
   -d \
-  frps:v0.62.1 \
+  elysiur/frps:v0.62.1 \
   -c /etc/frp/frps.toml
