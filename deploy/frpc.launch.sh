@@ -1,8 +1,9 @@
 LAUNCH_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+docker pull Elysiur/frpc:v0.62.1
 mkdir -p /etc/frp
 cp -i "$LAUNCH_DIR/frpc.toml" "/etc/frp/frpc.toml"
 docker run \
-  --name frps \
+  --name frpc \
   --restart always \
   --network host \
   -e TZ=Asia/Shanghai \
