@@ -1,9 +1,7 @@
-LAUNCH_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-
 docker pull elysiur/frps:v0.62.1
 
 mkdir -p /etc/frp
-cp -i "$LAUNCH_DIR/deploy/frps.toml" "/etc/frp/frps.toml"
+cp -i "./deploy/frps.toml" "/etc/frp/frps.toml"
 
 docker run \
   --name frps \

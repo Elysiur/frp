@@ -151,14 +151,14 @@ udpPacketSize = 1500
 # sshTunnelGateway.autoGenPrivateKeyPath = ""
 # sshTunnelGateway.authorizedKeysFile = "/home/frp-user/.ssh/authorized_keys"
 
-[[httpPlugins]]
-name = "user-manager"
-addr = "127.0.0.1:9000"
-path = "/handler"
-ops = ["Login"]
+# [[httpPlugins]]
+# name = "user-manager"
+# addr = "127.0.0.1:9000"
+# path = "/handler"
+# ops = ["Login"]
 
-[[httpPlugins]]
-name = "port-manager"
-addr = "127.0.0.1:9001"
-path = "/handler"
-ops = ["NewProxy"]
+# [[httpPlugins]]
+# name = "port-manager"
+# addr = "127.0.0.1:9001"
+# path = "/handler"
+# ops = ["NewProxy"]
